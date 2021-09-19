@@ -30,52 +30,7 @@
 	============================================= -->
 	<div id="wrapper" class="clearfix">
 
-		<!-- Header
-		============================================= -->
-		<header id="header" class="full-header">
-			<div id="header-wrap">
-				<div class="container">
-					<div class="header-row">
-
-						<!-- Logo
-						============================================= -->
-						<div id="logo">
-							<a href="index" class="standard-logo" data-dark-logo="images/bmw.png"><img src="images/bmw.png" alt="Canvas Logo"></a>
-							<a href="index" class="retina-logo" data-dark-logo="images/bmw.png"><img src="images/bmw.png" alt="Canvas Logo"></a>
-						</div><!-- #logo end -->
-
-
-						<div id="primary-menu-trigger">
-							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
-						</div>
-
-						<!-- Primary Navigation
-						============================================= -->
-
-						<nav class="primary-menu">
-
-							<ul class="menu-container">
-								<li class="menu-item">
-									<a class="menu-link" href="index"><div>Home</div></a>
-								</li>
-								<li class="menu-item">
-									<a class="menu-link" href="contact"><div>Contact</div></a>
-								</li>
-
-
-						</nav><!-- #primary-menu end -->
-
-						<!-- #primary-menu end -->
-
-						<form class="top-search-form" action="search.html" method="get">
-							<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
-						</form>
-
-					</div>
-				</div>
-			</div>
-			<div class="header-wrap-clone"></div>
-		</header><!-- #header end -->
+        <x-header--contact/>
 
 		<!-- Page Title
 		============================================= -->
@@ -268,74 +223,7 @@
 		</section><!-- #content end -->
 
 
-		<footer id="footer" class="dark">
-
-			<!-- Copyrights
-			============================================= -->
-			<div id="copyrights">
-				<div class="container">
-
-					<div class="row col-mb-30">
-
-						<div class="col-md-6 text-center text-md-left">
-							Copyrights &copy; 2020 All Rights Reserved by Canvas Inc.<br>
-							<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
-						</div>
-
-						<div class="col-md-6 text-center text-md-right">
-							<div class="d-flex justify-content-center justify-content-md-end">
-								<a href="#" class="social-icon si-small si-borderless si-facebook">
-									<i class="icon-facebook"></i>
-									<i class="icon-facebook"></i>
-								</a>
-
-								<a href="#" class="social-icon si-small si-borderless si-twitter">
-									<i class="icon-twitter"></i>
-									<i class="icon-twitter"></i>
-								</a>
-
-								<a href="#" class="social-icon si-small si-borderless si-gplus">
-									<i class="icon-gplus"></i>
-									<i class="icon-gplus"></i>
-								</a>
-
-								<a href="#" class="social-icon si-small si-borderless si-pinterest">
-									<i class="icon-pinterest"></i>
-									<i class="icon-pinterest"></i>
-								</a>
-
-								<a href="#" class="social-icon si-small si-borderless si-vimeo">
-									<i class="icon-vimeo"></i>
-									<i class="icon-vimeo"></i>
-								</a>
-
-								<a href="#" class="social-icon si-small si-borderless si-github">
-									<i class="icon-github"></i>
-									<i class="icon-github"></i>
-								</a>
-
-								<a href="#" class="social-icon si-small si-borderless si-yahoo">
-									<i class="icon-yahoo"></i>
-									<i class="icon-yahoo"></i>
-								</a>
-
-								<a href="#" class="social-icon si-small si-borderless si-linkedin">
-									<i class="icon-linkedin"></i>
-									<i class="icon-linkedin"></i>
-								</a>
-							</div>
-
-							<div class="clear"></div>
-
-							<i class="icon-envelope2"></i> info@canvas.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +1-11-6541-6369 <span class="middot">&middot;</span> <i class="icon-skype2"></i> CanvasOnSkype
-						</div>
-
-					</div>
-
-				</div>
-			</div><!-- #copyrights end -->
-
-		</footer><!-- #footer end -->
+		<x-footer/>
 
 	</div><!-- #wrapper end -->
 
