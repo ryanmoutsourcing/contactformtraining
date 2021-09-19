@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="{{ asset('css/animate.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
 
-	<link rel="stylesheet" href="css/custom.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/custom.css') }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<!-- Document Title
