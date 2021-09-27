@@ -7,8 +7,8 @@
                     <!-- Logo
                     ============================================= -->
                     <div id="logo">
-                        <a href="index.html" class="standard-logo" data-dark-logo="images/bmw.png"><img src="images/bmw.png" alt="Canvas Logo"></a>
-                        <a href="index.html" class="retina-logo" data-dark-logo="images/bmw.png"><img src="images/bmw.png" alt="Canvas Logo"></a>
+                        <a href="/" class="standard-logo" data-dark-logo="images/bmw.png"><img src="images/bmw.png" alt="Canvas Logo"></a>
+                        <a href="/" class="retina-logo" data-dark-logo="images/bmw.png"><img src="images/bmw.png" alt="Canvas Logo"></a>
                     </div><!-- #logo end -->
 
                     <div class="header-misc">
@@ -27,7 +27,7 @@
 
                         <ul class="menu-container">
                             <li class="menu-item">
-                                <a class="menu-link" href="index"><div>Home</div></a>
+                                <a class="menu-link" href=""><div>Home</div></a>
                             </li>
                             <li class="menu-item">
                                 <a class="menu-link" href="contact"><div>Contact</div></a>

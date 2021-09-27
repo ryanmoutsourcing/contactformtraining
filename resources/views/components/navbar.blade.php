@@ -7,7 +7,7 @@
 
 							<ul class="menu-container">
 								<li class="menu-item">
-									<a class="menu-link" href="index"><div>Home</div></a>
+									<a class="menu-link" href="/"><div>Home</div></a>
 								</li>
 								<li class="menu-item">
 									<a class="menu-link" href="contact"><div>Contact</div></a>

@@ -19,6 +19,7 @@ Route::get('/', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
-Route::get('/index', function () {
-    return view('index');
-});
+
+Route::get('/contact', [ContactUsFormController::class, 'createForm']);
+
+Route::post('/contact', [ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');

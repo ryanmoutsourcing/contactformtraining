@@ -9,8 +9,8 @@
 						<!-- Logo
 						============================================= -->
 						<div id="logo">
-							<a href="index" class="standard-logo" data-dark-logo="images/bmw.png"><img src="images/bmw.png" alt="Canvas Logo"></a>
-							<a href="index" class="retina-logo" data-dark-logo="images/bmw.png"><img src="images/bmw.png" alt="Canvas Logo"></a>
+							<a href="" class="standard-logo" data-dark-logo="images/bmw.png"><img src="images/bmw.png" alt="Canvas Logo"></a>
+							<a href="" class="retina-logo" data-dark-logo="images/bmw.png"><img src="images/bmw.png" alt="Canvas Logo"></a>
 						</div><!-- #logo end -->
 
 

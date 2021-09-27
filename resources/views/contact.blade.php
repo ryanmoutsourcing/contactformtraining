@@ -84,7 +84,18 @@
 
 								<div class="form-result"></div>
 
-								<form class="row mb-0" id="template-contactform" name="template-contactform" action="include/form.php" method="post">
+                                        <!-- Success message -->
+                                        @if(Session::has('success'))
+                                            <div class="alert alert-success">
+                                                {{Session::get('success')}}
+                                            </div>
+                                        @endif
+
+								<form action="" class="row mb-0" method="post" action="{{ route('contact.store') }}">
+
+                                {{-- the form name and id used to be name="template-contactform" --}}
+
+                                    @csrf
 
 									<div class="form-process">
 										<div class="css3-spinner">
@@ -93,34 +104,34 @@
 									</div>
 
 									<div class="col-md-4 form-group">
-										<label for="template-contactform-name">Name <small>*</small></label>
-										<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control required" />
+										<label for="name">Name <small>*</small></label>
+										<input type="text" id="template-contactform-name" name="name" value="" class="sm-form-control required" />
 									</div>
 
 									<div class="col-md-4 form-group">
-										<label for="template-contactform-email">Email <small>*</small></label>
-										<input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control" />
+										<label for="email">Email <small>*</small></label>
+										<input type="email" id="template-contactform-email" name="email" value="" class="required email sm-form-control" />
 									</div>
 
 									<div class="col-md-4 form-group">
-										<label for="template-contactform-phone">Phone</label>
-										<input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control" />
+										<label for="phone">Phone</label>
+										<input type="text" id="template-contactform-phone" name="phone" value="" class="sm-form-control" />
 									</div>
 
 									<div class="w-100"></div>
 
 									<div class="col-md-8 form-group">
-										<label for="template-contactform-subject">Subject <small>*</small></label>
+										<label for="subject">Subject <small>*</small></label>
 										<input type="text" id="template-contactform-subject" name="subject" value="" class="required sm-form-control" />
 									</div>
 
 									<div class="col-md-4 form-group">
-										<label for="template-contactform-service">Services</label>
-										<select id="template-contactform-service" name="template-contactform-service" class="sm-form-control">
+										<label for="services">Services</label>
+										<select id="template-contactform-service" name="services" class="sm-form-control">
 											<option value="">-- Select One --</option>
 											<option value="Wordpress">Wordpress</option>
-											<option value="PHP / MySQL">PHP / MySQL</option>
-											<option value="HTML5 / CSS3">HTML5 / CSS3</option>
+											<option value="PHP/MySQL">PHP / MySQL</option>
+											<option value="HTML5/CSS3">HTML5 / CSS3</option>
 											<option value="Graphic Design">Graphic Design</option>
 										</select>
 									</div>
@@ -128,23 +139,31 @@
 									<div class="w-100"></div>
 
 									<div class="col-12 form-group">
-										<label for="template-contactform-message">Message <small>*</small></label>
-										<textarea class="required sm-form-control" id="template-contactform-message" name="template-contactform-message" rows="6" cols="30"></textarea>
+										<label for="message">Message <small>*</small></label>
+										<textarea class="required sm-form-control" id="template-contactform-message" name="message" rows="6" cols="30"></textarea>
+
+                                        @if ($errors->has('message'))
+                                        <div class="error">
+                                            {{ $errors->first('message') }}
+                                        </div>
+                                        @endif
+
 									</div>
 
-									<div class="col-12 form-group d-none">
+									<!--<div class="col-12 form-group d-none">
 										<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
-									</div>
-
+									</div>-->
+                                    <!-- commented out captcha for now
 									<div class="col-12 form-group">
 
 										<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 										<div class="g-recaptcha" data-sitekey="6LfijgUTAAAAACPt-XfRbQszAKAJY0yZDjjhMUQT"></div>
 
 									</div>
+                                -->
 
 									<div class="col-12 form-group">
-										<button class="button button-3d m-0" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Send Message</button>
+										<button class="button button-3d m-0" type="submit" id="template-contactform-submit" name="send" value="Submit">Send Message</button>
 									</div>
 
 									<input type="hidden" name="prefix" value="template-contactform-">
