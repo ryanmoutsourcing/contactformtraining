@@ -13,21 +13,24 @@ class ContactUsFormController extends Controller
         return view ('contact');
     }
 
-    // Form Validation
+    //Store Contact Form Data
 
-    $this->validate($request, [
-        'name' => 'required',
-        'e-mail' => 'required|email',
-        'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
-        'subject' => 'required',
-        'message' => 'required',
-        'services' => 'required'
-        //e-mail, phone, subject, message, services
-    ]);
+    public function ContactUsForm(Request $request) {
+        // Form Validation
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+            'subject' => 'required',
+            'message' => 'required',
+            'services' => 'required'
+            //e-mail, phone, subject, message, services
+        ]);
 
-    // Store data in database
-    Contact::create($request->all());
+        // Store data in database
+        Contact::create($request->all());
 
-    //
-    return back()->with('success', 'We have received your message and would like to thank you for writing to us.');
+        //
+        return back()->with('success', 'We have received your message and would like to thank you for writing to us.');
+    }
 }

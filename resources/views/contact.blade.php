@@ -106,16 +106,44 @@
 									<div class="col-md-4 form-group">
 										<label for="name">Name <small>*</small></label>
 										<input type="text" id="template-contactform-name" name="name" value="" class="sm-form-control required" />
+
+                                        <!-- Error -->
+                                            @if ($errors->has('name'))
+                                            <div class="error">
+                                                {{ $errors->first('name') }}
+                                            </div>
+                                            @endif
+                                        <!-- End Of Error -->
+
+
 									</div>
 
 									<div class="col-md-4 form-group">
 										<label for="email">Email <small>*</small></label>
 										<input type="email" id="template-contactform-email" name="email" value="" class="required email sm-form-control" />
+
+                                        <!-- Error -->
+                                        @if ($errors->has('email'))
+                                        <div class="error">
+                                            {{ $errors->first('email') }}
+                                        </div>
+                                        @endif
+                                        <!-- End Of Error -->
+
 									</div>
 
 									<div class="col-md-4 form-group">
 										<label for="phone">Phone</label>
 										<input type="text" id="template-contactform-phone" name="phone" value="" class="sm-form-control" />
+
+                                        <!-- Error -->
+                                        @if ($errors->has('phone'))
+                                        <div class="error">
+                                         {{ $errors->first('phone') }}
+                                        </div>
+                                        @endif
+                                        <!-- End Of Error -->
+                                                                <!-- End Of Error -->
 									</div>
 
 									<div class="w-100"></div>
@@ -123,6 +151,15 @@
 									<div class="col-md-8 form-group">
 										<label for="subject">Subject <small>*</small></label>
 										<input type="text" id="template-contactform-subject" name="subject" value="" class="required sm-form-control" />
+
+                                        <!-- Error -->
+                                        @if ($errors->has('subject'))
+                                        <div class="error">
+                                         {{ $errors->first('subject') }}
+                                        </div>
+                                        @endif
+                                        <!-- End Of Error -->
+
 									</div>
 
 									<div class="col-md-4 form-group">
